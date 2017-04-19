@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Visualizing DEP Results</h1>
+    <p class="lead">Calculate Dielectrophoresis Without Scripting Knowledge</p>
+</div>
+
+<div class="row">
+    <div class="col-md-10">
+        <h2><span class="glyphicon glyphicon-ok"></span> Get Started</h2>
+        <p>
+            <p>Graphing is a great way to see patterns and easily interpret complex data. This project
+       is aimed at easily understanding dielectrophoresis on cells by creating a graph with the following parameters.  </p>
+           
+            <ul>
+                <li>Media Permittivity</li>
+                <li>Media Conductivity</li>
+                <li>Membrane Permittivity</li>
+                <li>Membrane Conductivity</li>
+                <li>Cytoplasm Permittivity</li>
+                <li>Cytoplasm Conductivity</li>
+                <li>Cell Radius</li>
+                <li>Shell Thickness</li>
+            </ul>
+
+            <p>All you need to do is enter those values and click "Create" to obtain the graph. No
+        special software or scripting abilities needed.</p>
+
+            <p><h4>Have data you want to graph? Click "Graph Parameters" below.</h4></p>
+
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("GraphParameters", "Home")">Graph Parameters &raquo;</a></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10">
+        <h2><span class="glyphicon glyphicon-book"></span> More Details</h2>
+        <p style="text-indent: 3em;">
+            Dielectrophoresis (DEP) separation is the process of using a tuned electric field to segregate different 
+            particles or cells. In order to properly separate cells, the properties of all particles involved must be
+             evaluated to know how they will react to the electric field. Currently, this calculation requires the use 
+            of MATLAB&reg or similar programs using custom scripts, which typically only support the calculation of one 
+            particle at a time. Visualizing DEP Results allows researchers, worldwide, access to a free tool that make
+            s it easier to interpret their data without the need of an expensive program or scripting knowledge.
+             Furthermore, this project displays multiple DEP curves on one graph, allowing users to quickly determine
+             the ideal parameters for DEP separation.
+        </p>
+    </div>
+</div>

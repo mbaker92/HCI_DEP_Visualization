@@ -1,0 +1,27 @@
+﻿@using Geiger.Models
+@model Geiger.Models.GraphData
+
+@{
+    ViewBag.Title = "Graph";
+
+    if (Model == null || Model.Chart == null)
+    {
+        // Dummy data when none is supplied
+        Model.Chart = new DotNet.Highcharts.Highcharts("chart")
+            .SetXAxis(new DotNet.Highcharts.Options.XAxis
+            {
+                Categories = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" }
+            })
+            .SetSeries(new DotNet.Highcharts.Options.Series
+            {
+                Data = new DotNet.Highcharts.Helpers.Data(new object[] { 29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4 })
+            });
+    }
+}
+
+<h2>Graph</h2>
+@*<script src="~/Scripts/Highcharts-4.0.1/js/highcharts.js"></script>*@
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+@(Model.Chart)
+
